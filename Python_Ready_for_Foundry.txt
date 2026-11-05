@@ -1,0 +1,5 @@
+python --version
+where python
+pip --version
+python -c "print('Ready for Foundry')"
+pip install openai azure-ai-projects azure-identity

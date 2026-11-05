@@ -1,0 +1,68 @@
+# Check Python version
+python --version
+
+# Alternative Python command if needed
+python3 --version
+
+# Show Python executable location (Windows)
+where python
+
+# Show Python executable location (Mac/Linux)
+which python3
+
+# Check pip version
+pip --version
+
+# Verify Python paths exist in PATH (Windows CMD)
+echo %PATH% | findstr Python
+
+# Verify Python paths exist in PATH (PowerShell)
+$env:PATH -split ';' | Select-String Python
+
+# Verify Python paths exist in PATH (Mac/Linux)
+echo $PATH | tr ':' '\n' | grep python
+
+# Test Python execution
+python -c "print('Python works')"
+
+# Show installed packages
+pip list
+
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment (Windows CMD)
+.venv\Scripts\activate.bat
+
+# Activate virtual environment (PowerShell)
+.\.venv\Scripts\Activate.ps1
+
+# Activate virtual environment (Mac/Linux)
+source .venv/bin/activate
+
+# Confirm active Python location
+python -c "import sys; print(sys.executable)"
+
+# Confirm active virtual environment
+python -c "import sys; print(sys.prefix)"
+
+# Upgrade pip
+python -m pip install --upgrade pip
+
+# Install Foundry/OpenAI packages
+pip install openai azure-ai-projects azure-identity
+
+# Verify OpenAI package
+python -c "import openai; print('OpenAI OK')"
+
+# Verify Azure AI Projects package
+python -c "from azure.ai.projects import AIProjectClient; print('AI Projects OK')"
+
+# Verify Azure Identity package
+python -c "from azure.identity import DefaultAzureCredential; print('Azure Identity OK')"
+
+# Create a simple test file
+echo print('Hello Foundry') > test.py
+
+# Run test file
+python test.py
