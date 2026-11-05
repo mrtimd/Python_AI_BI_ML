@@ -66,3 +66,9 @@ echo print('Hello Foundry') > test.py
 
 # Run test file
 python test.py
+
+#Microsoft Python extension is not installed - cmd shell
+code --list-extensions | findstr python
+#Expected ms-python.python
+#install
+code --install-extension ms-python.python
