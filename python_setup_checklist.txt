@@ -72,3 +72,6 @@ code --list-extensions | findstr python
 #Expected ms-python.python
 #install
 code --install-extension ms-python.python
+ 
+#install requirements.txt file
+pip install -r requirements.txt
